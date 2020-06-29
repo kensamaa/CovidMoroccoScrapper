@@ -57,7 +57,7 @@ app.get('/last',async(re,res,next)=>{
 const userRouter=require('./routes/user');
 app.use('/user',userRouter);
 
-const uri = "mongodb+srv://kensama:kensama123@cluster0-pbt6g.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://kensama:'your password'@cluster0-pbt6g.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.connect(uri,{useUnifiedTopology: true,useNewUrlParser : true,useCreateIndex : true});
      
     // get reference to database

@@ -229,7 +229,7 @@ async function quick(){
           //var exclu=getCasexclus()
 
 async function runCron(){
-    //const uri = "mongodb+srv://kensama:kensama123@cluster0-pbt6g.mongodb.net/test?retryWrites=true&w=majority";
+    
     
     //now here we gonna get the data from the fucntinos i mean scrapping them from the website 
     const [exclu,casconfirm,died,cured,casablanca,marakech,Rabat,tanger,Fesmeknes,oriental,beniMellal,DaraaTafilalet,DakhlaOuedEdDahab,SoussMassa,LaayouneSakiaElHamra,Guelmim]= await Promise.all([

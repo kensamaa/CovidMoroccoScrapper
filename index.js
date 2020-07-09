@@ -46,12 +46,12 @@ app.get('/scrapp',async(req,res,next)=>{
 //api will get data from database 
 app.get('/',async(req,res,next)=>{
     covidmorocco.find()//mongo method that get all exercise from database
-    .then(covid=>res.json(covid))//get all exercise then return in json format the users from database
+    .then(covid=>res.json(covid))//get all data then return in json format the users from database
     .catch(err=>res.status(400).json('error :'+err));
 })
-app.get('/last',async(re,res,next)=>{
+app.get('/last',async(re,res,next)=>{//return the last added data of covid
     covidmorocco.findOne().sort({ field: 'asc', _id: -1 }).limit(1)//mongo method that get all exercise from database
-    .then(covid=>res.json(covid))//get all exercise then return in json format the users from database
+    .then(covid=>res.json(covid))
     .catch(err=>res.status(400).json('error :'+err));
 })
 const userRouter=require('./routes/user');

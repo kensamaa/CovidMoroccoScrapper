@@ -19,6 +19,9 @@ and server provid api to get the data from the database</p>
 <h4>api that sends data of all users</h4>
 
 ![](img/4.png)
+<h4>get data about a specific id of the user/phone</h4>
+
+![](img/5.png)
 <h2>commande line used</h2>
 <ul>
 <li>npm init -y </li>

@@ -3,12 +3,12 @@ let user=require('../models/user.models');
 
 
 router.route('/').get((req,res)=>{
-    user.find()//mongo method that get all exercise from database
-    .then(users=>res.json(users))//get all exercise then return in json format the users from database
+    user.find()//mongo method that get all user from database
+    .then(users=>res.json(users))//get all user then return in json format the users from database
     .catch(err=>res.status(400).json('error :'+err));
 });
 
-router.route('/add').post((req,res)=>{
+router.route('/add').post((req,res)=>{//adding a user
     const PhoneId=req.body.PhoneId;
     const latitude=req.body.latitude;
     const longitude=req.body.longitude;
@@ -24,9 +24,9 @@ router.route('/add').post((req,res)=>{
     .catch(err=>res.status(400).json('error' +err));
 });
 
-router.route('/:PhoneId').get((req, res) => {
+router.route('/:PhoneId').get((req, res) => {//get the user depends on the phone id
     user.find({ PhoneId: req.params.PhoneId })
-      .then(exercise => res.json(exercise))
+      .then(user => res.json(user))
       .catch(err => res.status(400).json('Error: ' + err));
   });
 
